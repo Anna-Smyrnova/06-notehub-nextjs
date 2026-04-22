@@ -14,7 +14,7 @@ import css from "@/components/NotesPage/NotesPage.module.css"
 
 import { fetchNotes } from "@/lib/api";
 
-export default function Notes() {
+export default function NotesClient() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
