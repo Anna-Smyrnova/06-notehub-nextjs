@@ -43,7 +43,7 @@ export default function NotesClient() {
   return (
     <div className={css.app}>
       <header className={css.toolbar}>
-        <SearchBox value={searchQuery} onSearch={handleSearch} />
+        <SearchBox defaultValue={searchQuery} onSearch={handleSearch} />
 
         {isSuccess && totalPages > 1 && (
           <Pagination
