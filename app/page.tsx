@@ -1,11 +1,10 @@
 import Home from "@/components/Home/Home";
 
-export default function App() {
+export default function AppHome() {
   return (
-    <div>
-      <main>
+          <main>
     <Home />
       </main>
-    </div>
+   
   );
 }

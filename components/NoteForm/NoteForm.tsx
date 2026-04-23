@@ -45,6 +45,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
         mutationFn: (newNote: NewNote) => createNote (newNote),
         onSuccess() {
             queryClient.invalidateQueries({queryKey: ['notes']});
+              onClose();
         },
     });
 
@@ -58,8 +59,9 @@ const onSubmit = (
     onSuccess: () => {
       formikHelpers.resetForm();
       formikHelpers.setSubmitting(false);
-      setTimeout(onClose, 300);
-    },
+      },
+      onError: () => {
+        formikHelpers.setSubmitting(false);},
   });
 };
     return ( <Formik

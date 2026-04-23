@@ -12,6 +12,7 @@ const { data: note, isLoading, error } = useQuery({
   queryKey: ["note", id],
   queryFn: () => fetchNoteById(id as string),
   enabled: Boolean(id),
+  refetchOnMount: false,
 });
 
   if (isLoading) return <p>Loading, please wait...</p>;
